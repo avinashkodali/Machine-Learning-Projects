@@ -40,20 +40,23 @@ Once the application is running, you can access it through a web interface or a 
 
 Database:
 
-Orders Table:
+Orders Table: 
+
 ![Orders Table](./images/orders_table.png)
 
 Customers Table:
+
 ![Customers Table](./images/customers_table.png)
 
 Here are some sample outputs of the application:
 
 1. Natural Language Query: Retrieve the top 2 customers who have spent the most in total, along with their total spending amount.
+
   ![Output 1](./images/output_01.png)
 
 2. Natural Language Query: List the orders made in the second quarter of 2023 (April 1, 2023, to June 30, 2023) along with the customer's full name, email address, and order total.
 
-    ![Output 2](./images/output_02.png)
+   ![Output 2](./images/output_02.png)
 
 3. Natural Language Query: Identify the customers who have made orders totaling more than the average total amount spent by all customers. Display their full names and email addresses.
 
