@@ -35,6 +35,8 @@ submit1 = st.button("Tell Me About the Resume")
 
 submit2 = st.button("Percentage Match")
 
+submit3 = st.button("Update Resume")
+
 if submit1:
     if uploaded_file is not None:
         text = input_pdf_text(uploaded_file)
@@ -80,6 +82,26 @@ resume: {text}
 job description: {jd}
 """
         response = get_gemini_response(input_prompt_2)
+        st.subheader("The Response is")
+        st.write(response)
+    else:
+        st.write("Please upload the resume")
+
+if submit3:
+    if uploaded_file is not None:
+        text = input_pdf_text(uploaded_file)
+        input_prompt_3 = f"""
+Assume the role of a candidate applying for the position described in the following job description. Your goal is to optimize your resume to maximize the match percentage with the job requirements. carefully review the job description and make strategic adjustments to your resume by incorporating relevant keywords, skills, and qualifications.
+
+Job Description:
+{jd}
+
+Original Resume:
+{text}
+
+Updated Resume:
+"""
+        response = get_gemini_response(input_prompt_3)
         st.subheader("The Response is")
         st.write(response)
     else:
